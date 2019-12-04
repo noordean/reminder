@@ -1,3 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
-  alert("Reminder!!!");
+  // Do something in the background
+
+  //   alert("Reminder!!!");
 });
