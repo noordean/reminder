@@ -1,2 +1,2 @@
 # reminder
-Daily Hadith/Quran-verses reminder
+Quran-verses reminder
