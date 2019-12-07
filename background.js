@@ -1,6 +1,16 @@
+const KEYWORDS = [
+  "death",
+  "grave",
+  "punishment",
+  "hereafter",
+  "judgement",
+  "hell"
+];
+
 const fetchVerse = async () => {
+  const randomKeyword = KEYWORDS[Math.floor(Math.random() * KEYWORDS.length)];
   const response = await fetch(
-    "http://api.alquran.cloud/v1/search/death/all/en.ahmedali",
+    `http://api.alquran.cloud/v1/search/${randomKeyword}/all/en.ahmedali`,
     {
       method: "GET",
       headers: {
@@ -9,8 +19,7 @@ const fetchVerse = async () => {
     }
   );
   const result = await response.json();
-  alert(JSON.stringify(result.data));
-  return result;
+  localStorage.setItem("reminder", JSON.stringify(result.data));
 };
 
 chrome.runtime.onInstalled.addListener(() => {
