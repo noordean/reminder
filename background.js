@@ -23,7 +23,7 @@ const fetchVerse = async () => {
 };
 
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.alarms.create("fetch_verses", { periodInMinutes: 1 });
+  chrome.alarms.create("fetch_verses", { periodInMinutes: 5 });
 });
 
 chrome.alarms.onAlarm.addListener(alarm => {

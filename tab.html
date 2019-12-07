@@ -3,11 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <title>Reminder!</title>
+    <style>
+      html {
+        background: url(static/sky.jpg) no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        font-family: "Barlow Condensed", serif;
+        padding: 0 2em;
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      .verse {
+        margin-top: 5vh;
+        font-size: 1.5rem;
+      }
+
+      .verse:before {
+        content: "– ";
+      }
+
+      .text:after {
+        content: "\201d";
+      }
+    </style>
   </head>
   <body>
-    <div id="text"></div>
-    <div id="verse"></div>
+    <div class="text-wrapper">
+      <div id="text" class="text"></div>
+      <div id="verse" class="verse"></div>
+    </div>
   </body>
 
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="static/script.js"></script>
 </html>
